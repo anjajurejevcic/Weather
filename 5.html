@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="css.css" />
+    <script
+      src="https://kit.fontawesome.com/2e0f9dc803.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="vsebina">
+      <form class="isci" id="vsebina">
+        <input type="text" placeholder="Type city" id="type-city" class="Lj" />
+        <input type="submit" value="Search" />
+      </form>
+
+      <div>
+        <h1 id="lokacija">Ljubljana</h1>
+      </div>
+      <div class="dnevnaNapoved">
+        <div class="row">
+          <div class="col">
+            <ul>
+              <li id="danes">Today</li>
+              <br />
+              <li>Feels like: <span id="feeling">80</span>°C</li>
+              <li>Humidity: <span id="humidity">80</span>%</li>
+              <li>Wind: <span id="wind">5</span> km/h</li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="ikona">
+              <div class="dan"><i class="far fa-snowflake"></i></div>
+              <h4 id="today-temperature">-5 °C</h4>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column">
+            Monday <br /><i class="far fa-snowflake"></i><br />-5/-1 °C
+          </div>
+          <div class="column">
+            Tuesday<br /><i class="far fa-snowflake"></i><br />-5/-1 °C
+          </div>
+          <div class="column">
+            Wednesday <br /><i class="far fa-snowflake"></i><br />-5/-1 °C
+          </div>
+          <div class="column">
+            Thursday <br /><i class="far fa-snowflake"></i><br />-5/-1 °C
+          </div>
+        </div>
+
+        <br /><br /><br />
+        <div><p class="zakljucek">Coded by Anja Jurejevčič</p></div>
+      </div>
+    </div>
+    <script src="js.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+img {
+  width: 600px;
+  margin-top: -200px;
+  z-index: -2;
+}
+
+h1 {
+  font-size: 35px;
+}
+p {
+  font-size: 20px;
+}
+ul {
+  list-style-type: none;
+  font-size: 24px;
+}
+i {
+  font-size: 35px;
+}
+input {
+  font-family: "Kalam", cursive;
+  text-align: left;
+  border-radius: 5px;
+  border: solid 0, 5px;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+button {
+  font-family: "Kalam", cursive;
+  text-align: right;
+
+  border-radius: 5px;
+  border: solid 0, 5px;
+  border-color: rgba(0, 0, 0, 0.2);
+  display: inline;
+}
+
+.isci {
+  text-align: left;
+  padding-left: 10%;
+}
+.vsebina {
+  max-width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20px;
+
+  padding-top: 10px;
+  text-align: center;
+  border-color: rgba(0, 0, 0, 0.2);
+  border: rgba(0, 0, 0, 0.2) solid 5px;
+  border-radius: 15px;
+  font-family: "Kalam", cursive;
+  background-color: #ffff;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.column {
+  float: left;
+  width: 22%;
+  font-size: 18px;
+  border: rgba(0, 0, 0, 0.2) solid 2px;
+  margin: 5px 4px 5px 5px;
+  margin-inline-start: 8px;
+  scroll-padding-inline-start: 50px;
+  border-radius: 8px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #ffff;
+}
+
+.col {
+  float: left;
+  width: 50%;
+}
+.col i {
+  font-size: 150px;
+}
+
+.zakljucek {
+  font-size: 12px;
+}
+.lokacija,
+#danes,
+#lokacija {
+  text-transform: uppercase;
+}

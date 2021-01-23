@@ -29,6 +29,18 @@ function now() {
   danes.innerHTML = rightTime;
 }
 
+function ura(timestamp) {
+  let datum = new Date(timestamp);
+  let hour = datum.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = datum.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  return `${hour}:${minute}`;
+}
 //lokacija v iskalniku in prikaz napisa
 function city(event) {
   now();
@@ -60,12 +72,81 @@ function city(event) {
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
   }
-
+  function napoved(response) {
+    let jutriNapoved = document.querySelector("#jutri");
+    let odgovor = response.data.list[0];
+    jutriNapoved.innerHTML = `
+      <div class="column">
+        <span>${ura(odgovor.dt * 1000)}</span>
+        <br />
+        <img
+          class="teden-ikona"
+          src="http://openweathermap.org/img/wn/${
+            odgovor.weather[0].icon
+          }@2x.png"
+        />
+        <br />
+        <span>${Math.round(odgovor.main.temp)}</span>
+        °C
+      </div>
+    `;
+    odgovor = response.data.list[1];
+    jutriNapoved.innerHTML += `
+      <div class="column">
+        <span>${ura(odgovor.dt * 1000)}</span>
+        <br />
+        <img
+          class="teden-ikona"
+          src="http://openweathermap.org/img/wn/${
+            odgovor.weather[0].icon
+          }@2x.png"
+        />
+        <br />
+        <span>${Math.round(odgovor.main.temp)}</span>
+        °C
+      </div>
+    `;
+    odgovor = response.data.list[2];
+    jutriNapoved.innerHTML += `
+      <div class="column">
+        <span>${ura(odgovor.dt * 1000)}</span>
+        <br />
+        <img
+          class="teden-ikona"
+          src="http://openweathermap.org/img/wn/${
+            odgovor.weather[0].icon
+          }@2x.png"
+        />
+        <br />
+        <span>${Math.round(odgovor.main.temp)}</span>
+        °C
+      </div>
+    `;
+    odgovor = response.data.list[3];
+    jutriNapoved.innerHTML += `
+      <div class="column">
+        <span>${ura(odgovor.dt * 1000)}</span>
+        <br />
+        <img
+          class="teden-ikona"
+          src="http://openweathermap.org/img/wn/${
+            odgovor.weather[0].icon
+          }@2x.png"
+        />
+        <br />
+        <span>${Math.round(odgovor.main.temp)}</span>
+        °C
+      </div>
+    `;
+  }
   function today(mesto) {
     let mestoZanimanja = mesto;
     let apiKey = "80ca9bc09bcdce0795252b3c82d6bba7";
     let urlToday = `https://api.openweathermap.org/data/2.5/weather?q=${mestoZanimanja}&units=metric&appid=${apiKey}`;
     axios.get(urlToday).then(prikaz);
+
+    let urlNotToday = `https://api.openweathermap.org/data/2.5/forecast?q=${mestoZanimanja}&units=metric&appid=${apiKey}`;
+    axios.get(urlNotToday).then(napoved);
   }
   let mesto = document.querySelector("#type-city").value;
   today(mesto);

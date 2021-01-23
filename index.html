@@ -23,14 +23,14 @@
       </form>
 
       <div>
-        <h1 id="lokacija">Ljubljana</h1>
+        <h1 id="lokacija">Somewhere</h1>
       </div>
       <div class="dnevnaNapoved">
         <div class="row">
           <div class="col">
             <ul>
               <li id="danes">Today</li>
-              <br />
+
               <li>Feels like: <span id="feeling">8</span>°C</li>
               <li>Humidity: <span id="humidity">80</span>%</li>
               <li>Wind: <span id="wind">5</span> km/h</li>
@@ -38,52 +38,67 @@
           </div>
           <div class="col">
             <ul class="ikona">
-              <div class="dan"><i class="far fa-snowflake"></i></div>
-              <h4 id="today-temperature">-5 °C</h4>
+              <div class="dan">
+                <img
+                  id="weather_icon"
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                />
+                <h4 id="today-temperature">-5 °C</h4>
+              </div>
             </ul>
           </div>
         </div>
 
         <div class="row">
           <div class="column">
-            <span id="dan_dva">Tomorrow</span>
+            <span>Tomorrow</span>
 
-            <br /><i class="far fa-snowflake"></i><br /><span id="day2">8</span>
+            <br /><img
+              class="teden-ikona"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+            /><br /><span>8</span>
             °C
           </div>
           <div class="column">
-            <span id="dan3">Tomorrow</span>
-            <br /><i class="far fa-snowflake"></i><br /><span id="day3">8</span>
+            <span>Tomorrow</span>
+
+            <br /><img
+              class="teden-ikona"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+            /><br /><span>8</span>
             °C
           </div>
           <div class="column">
-            <span id="dan4">Tomorrow</span> <br /><i
-              class="far fa-snowflake"
-            ></i
-            ><br /><span id="day4">8</span>
+            <span>Tomorrow</span>
+
+            <br /><img
+              class="teden-ikona"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+            /><br /><span>8</span>
             °C
           </div>
           <div class="column">
-            <span id="dan5">Tomorrow</span> <br /><i
-              class="far fa-snowflake"
-            ></i
-            ><br /><span id="day5">8</span>
+            <span>Tomorrow</span>
+
+            <br /><img
+              class="teden-ikona"
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+            /><br /><span>8</span>
             °C
           </div>
-        </div>
-
-        <br /><br /><br />
-        <div>
-          <p class="zakljucek">
-            <a href="https://github.com/anjajurejevcic/Weather" target="_blank">
-              Open source code</a
-            >
-
-            by Anja Jurejevčič
-          </p>
         </div>
       </div>
+      <div>
+        <p class="zakljucek">
+          <a href="https://github.com/anjajurejevcic/Weather" target="_blank">
+            Open source code</a
+          >
+
+          by Anja Jurejevčič
+        </p>
+      </div>
     </div>
+
     <script src="js.jsx"></script>
   </body>
 </html>

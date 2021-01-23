@@ -1,6 +1,6 @@
 img {
-  width: 600px;
-  margin-top: -200px;
+  width: 200px;
+
   z-index: -2;
 }
 
@@ -39,9 +39,8 @@ button {
   padding-left: 10%;
 }
 .vsebina {
-  max-width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
+  max-width: 800px;
+
   margin-top: 20px;
 
   padding-top: 10px;
@@ -77,9 +76,21 @@ button {
 
 .zakljucek {
   font-size: 12px;
+  display: inline-block;
 }
 .lokacija,
 #danes,
 #lokacija {
   text-transform: uppercase;
+}
+
+#ikonca {
+  margin-top: auto;
+  width: 300px;
+}
+.row {
+  display: inline;
+}
+.teden-ikona {
+  width: 100px;
 }
